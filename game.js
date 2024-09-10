@@ -31,6 +31,7 @@ function dispHud() {
             <div>Character race: ${cData.Race}</div>
             <div>Character hp: ${cData.Hp}</div>
             <div>Character mana: ${cData.Mana}</div>
+            <div>Character Damage: ${cData.Damage}</div>
         `;
     } else {
         console.log("No game data found...");

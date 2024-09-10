@@ -4,7 +4,7 @@ const Character = {
     Race: "",
     Hp: 10,
     Mana: 35,
-    Level: 1,
+    Level: 2,
     Exp: 0,
     Damage: 5,
 
