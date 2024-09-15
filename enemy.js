@@ -2,27 +2,56 @@ const Enemy = {
     Race: "",
     Hp: 13,
     Mana: 20,
+    Damage: 5,
+    Level: 1,
 
-    // getters
-    get race() {
-        return this.Race;
-    },
-    get hp() {
-        return this.Hp;
-    },
-    get mana() {
-        return this.Mana;
-    },
-
-    // setters
-    set race(race) {
+    setEnemy(race) {
         this.Race = race;
-    },
-    set hp(hp) {
-        this.Hp = hp;
-    },
-    set mana(mana) {
-        this.mana = mana;
+        switch (race) {
+            case "Goblin":
+                this.Hp = 10;
+                this.Damage = 3;
+                break;
+            case "Deamon":
+                this.Hp = 10;
+                this.Damage = 3;
+                break;
+            case "Vampire":
+                this.Hp = 10;
+                this.Damage = 3;
+                break;
+            case "Troll":
+                this.Hp = 10;
+                this.Damage = 3;
+                break;
+            case "Orc":
+                this.Hp = 10;
+                this.Damage = 3;
+                break;
+            case "Elf":
+                this.Hp = 10;
+                this.Damage = 3;
+                break;
+            case "Dragon":
+                this.Hp = 10;
+                this.Damage = 3;
+                break;
+            case "Dwarf":
+                this.Hp = 10;
+                this.Damage = 3;
+                break;
+            case "Gnome":
+                this.Hp = 10;
+                this.Damage = 3;
+                break;
+            case "Human":
+                this.Hp = 10;
+                this.Damage = 3;
+                break;
+            default:
+                this.Hp = 11;
+                this.Damage = 2;
+        }
     },
 };
 
@@ -41,45 +70,9 @@ const EnemyRace = {
     ],
 };
 
-//let randomEnemy = Math.floor(Math.random(EnemyRace.Race) * 10);
-let randomEnemy =
-    EnemyRace.Race[Math.floor(Math.random() * EnemyRace.Race.length)];
-
-//enemySelect();
-function enemySelect() {
-    for (let i = 0; i < randomEnemy; i++) {
-        if (i == 0) {
-            Enemy.Race = randomEnemy;
-            console.log(randomEnemy);
-        } else if (i == 1) {
-            Enemy.Race = randomEnemy;
-            console.log(randomEnemy);
-        } else if (i == 2) {
-            Enemy.Race = randomEnemy;
-            console.log(randomEnemy);
-        } else if (i == 3) {
-            Enemy.Race = randomEnemy;
-            console.log(randomEnemy);
-        } else if (i == 4) {
-            Enemy.Race = randomEnemy;
-            console.log(randomEnemy);
-        } else if (i == 5) {
-            Enemy.Race = randomEnemy;
-            console.log(randomEnemy);
-        } else if (i == 6) {
-            Enemy.Race = randomEnemy;
-            console.log(randomEnemy);
-        } else if (i == 7) {
-            Enemy.Race = randomEnemy;
-            console.log(randomEnemy);
-        } else if (i == 8) {
-            Enemy.Race = randomEnemy;
-            console.log(randomEnemy);
-        } else if (i == 9) {
-            Enemy.Race = randomEnemy;
-            console.log(randomEnemy);
-        } else {
-            console.log("No enemy...");
-        }
-    }
+function selectRandomEnemy() {
+    const randonIdex = Math.floor(Math.random() * EnemyRace.Race.length);
+    const selectedIndex = EnemyRace.Race[randonIdex];
+    Enemy.setEnemy(selectedIndex);
+    console.log(Enemy);
 }

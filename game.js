@@ -1,8 +1,8 @@
 const game = document.getElementById("mainGame");
 
-gameDisp();
+gDisp();
 
-function gameDisp() {
+function gDisp() {
     game.innerHTML = `
         <div id="game">
         <h1>Character stats:</h1>
@@ -38,9 +38,9 @@ function dispHud() {
     }
 }
 
-mainGame();
+gameDisp();
 
-function mainGame() {
+function gameDisp() {
     dispGame.innerHTML = `
         <div id="logGame">
             <div id="gameLog"></div>
@@ -61,4 +61,48 @@ function gameAppendCmd() {
     gameLog.scrollTop = gameLog.scrollHeight;
 
     gameIn.value = "";
+
+    move();
 }
+
+moveTxt();
+function moveTxt() {
+    gameLog.innerHTML = `
+        <p>Move forwards (write 1 then press return)</p>
+        <p>Move backwards (write 2 then press return)</p>
+     `;
+}
+
+gameIn.addEventListener("keydown", function (event) {
+    if (event.key == "Enter") {
+        move();
+    }
+});
+
+function move() {
+    if (gameIn.value === "1") {
+        let rand = Math.floor(Math.random() * 100) + 1;
+        gameLog.innerHTML = `<p>You begin movig forwards</p>`;
+        if (rand > 50) {
+            gameLog.innerHTML += "Hello";
+            selectRandomEnemy();
+            console.log(Enemy);
+        }
+    } else if (gameIn.value === "2") {
+        let rand = Math.floor(Math.random() * 100) + 1;
+        gameLog.innerHTML = `<p>You begin movig backwards</p>`;
+        if (rand > 50) {
+            gameLog.innerHTML += "hello";
+            selectRandomEnemy();
+            console.log(Enemy);
+        }
+    } //else {
+    // gameLog.innerHTML = "Wrong input";
+    //}
+}
+
+/* function combat() {
+ *     enemySelect();
+ * }
+ *
+ * function levelUp() {} */
