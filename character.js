@@ -3,81 +3,86 @@ const Character = {
     Sex: "",
     Race: "",
     Hp: 10,
-    Mana: 35,
+    //Mana: 35,
     Level: 2,
     Exp: 0,
     Damage: 5,
 
+    // this._foo means that its "private" and not "public" // only classes can make true private with the # symbol.
     // getters
-    get name() {
-        return this.Name;
+    get Name() {
+        return this._Name;
     },
-    get sex() {
-        return this.Sex;
+    get Sex() {
+        return this._Sex;
     },
-    get race() {
-        return this.Race;
+    get Race() {
+        return this._Race;
     },
-    get hp() {
-        return this.HP;
+    get Hp() {
+        return this._HP;
     },
-    get mana() {
-        return this.Mana;
+    get Mana() {
+        return this._Mana;
     },
-    get level() {
-        return this.Level;
+    get Level() {
+        return this._Level;
     },
-    get exp() {
-        return this.Exp;
+    get Exp() {
+        return this._Exp;
     },
-    get damage() {
-        return this.Damage;
+    get Damage() {
+        return this._Damage;
     },
 
     // setters
-    set name(name) {
-        this.Name = name;
+    set Name(name) {
+        this._Name = name;
     },
-    set sex(sex) {
-        this.Sex = sex;
+    set Sex(sex) {
+        this._Sex = sex;
     },
-    set race(race) {
-        this.Race = race;
+    set Race(race) {
+        this._Race = race;
     },
-    set hp(hp) {
-        this.hp = hp;
+    set Hp(hp) {
+        this._hp = hp;
     },
-    set mana(mana) {
-        this.Mana = mana;
+    set Mana(mana) {
+        this._Mana = mana;
     },
-    set level(level) {
-        this.Level = level;
+    set Level(level) {
+        this._Level = level;
     },
-    set exp(exp) {
-        this.Exp = exp;
+    set Exp(exp) {
+        this._Exp = exp;
     },
-    set damage(damage) {
-        this.Damage = damage;
+    set Damage(damage) {
+        this._Damage = damage;
+    },
+
+    setRace(raceObj) {
+        this.Race = raceObj.Race;
+        this.Hp = raceObj.Hp;
     },
 };
 
 const sex = {
     Male: "Male",
     Female: "Female",
-
-    // getters
-    get male() {
-        return this.Male;
-    },
-    get female() {
-        return this.Female;
-    },
-
-    // setters
-    set male(male) {
-        this.Male = male;
-    },
-    set female(female) {
-        this.Female = female;
-    },
 };
+// // getters
+// get Male() {
+//     return this._Male;
+// },
+// get Female() {
+//     return this._Female;
+// },
+
+// // setters
+// set Male(male) {
+//     this.Male = male;
+// },
+// set Female(female) {
+//     this.Female = female;
+// },
