@@ -52,31 +52,45 @@ function selectSex(select) {
 function selectRace(select) {
     switch (select) {
         case 1:
-            Character.setRace(Elf);
+            Character.Race = Elf.Race;
+            Character.Hp = Elf.Hp;
+            //Character.setRace(Elf);
             console.log(Character);
             break;
         case 2:
-            Character.setRace(Orc);
+            Character.Race = Orc.Race;
+            Character.Hp = Orc.Hp;
+            //Character.setRace(Orc);
             console.log(Character);
             break;
         case 3:
-            Character.setRace(Goblin);
+            Character.Race = Goblin.Race;
+            Character.Hp = Goblin.Hp;
+            //Character.setRace(Goblin);
             console.log(Character);
             break;
         case 4:
-            Character.setRace(Troll);
+            Character.Race = Troll.Race;
+            Character.Hp = Troll.Hp;
+            //Character.setRace(Troll);
             console.log(Character);
             break;
         case 5:
-            Character.setRace(Dwarf);
+            Character.Race = Dwarf.Race;
+            Character.Hp = Dwarf.Hp;
+            //Character.setRace(Dwarf);
             console.log(Character);
             break;
         case 6:
-            Character.setRace(Gnome);
+            Character.Race = Gnome.Race;
+            Character.Hp = Gnome.Hp;
+            //Character.setRace(Gnome);
             console.log(Character);
             break;
         case 7:
-            Character.setRace(Human);
+            Character.Race = Human.Race;
+            Character.Hp = Human.Hp;
+            //Character.setRace(Human);
             console.log(Character);
             break;
         default:
